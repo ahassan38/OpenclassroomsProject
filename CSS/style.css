@@ -1,5 +1,15 @@
 /*
 POLICES
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
+/*
+POLICES
+*/
+
+:root{
+
+    --purple : #9356DC ;
+    --pink : #FF79DA ;
+    --green : #99E2D0 ;
+}
