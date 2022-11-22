@@ -25,20 +25,61 @@
                 
          <!-- zone de recherche -->
          <i class="fa-solid fa-location-dot"></i>
-         <input type='search' placeholder="Paris, Belleville" id='ville' name='ville' class='recherche-zone'>
+         <input type='search' placeholder="Paris, Belleville" id='ville' name='ville' class='recherche--zone'>
          <label for='ville' class='recherche__fa'></label>
 
          <!-- titre + texte -->
-         <h1 class='recherche__titre'>Réservez le menu qui vous convient</h1> 
+      <div class="bloc_titre">
+         <h1 class='recherche__titre'>Réservez le menu qui <br>vous convient</h1> 
          <p class='recherche__texte'>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-
+      
          <!-- bouton de recherche-->
          <input type='button' class='recherche--bouton' value="Explorer nos restaurants">
+      </div>
       </form>
 
-      <aside>
+      <!-- barre de navigation Fonctionnement-->
 
-      </aside>
+      <div class='fonctionnement'> 
+                    
+         <!-- titre -->
+         <h2 class='fonctionnement__titre'>Fonctionnement</h2>  
+
+         <!-- zone des boutons, admétons que c'est une navigation -->
+         <nav class='fonctionnement__explication'>   
+             
+             <!-- bouton 1 de fonctionnement -->
+             <button class='bouton'>
+
+                 <!-- numero -->
+                 <span class="bouton--numero">1</span> 
+
+                 <!-- icones --> <!-- double classe car taille icone differante pour pas faire de répétitions -->
+                 <i class="fas fa-mobile-alt bouton--noir bouton--tel"></i>
+                 <span class='fa bouton--violet bouton--tel'>&#xf3cd;</span> 
+
+                 <!-- texte -->
+                 Choisissez un restaurant 
+
+             </button>  
+
+             <!-- bouton 2 de fonctionnement -->
+             <button class='bouton'>
+                 <span class="bouton--numero">2</span> 
+                 <i class="fas fa-list-ul bouton--noir"></i>
+                 <span class='fa bouton--violet'>&#xf0ca;</span> 
+                        Composez votre menu
+             </button>  
+             
+             <!-- bouton 3 de fonctionnement -->
+             <button class='bouton'>
+                 <span class="bouton--numero">3</span> 
+                 <i class="fas fa-store bouton--noir"></i>
+                 <span class='fa bouton--violet'>&#xf54e;</span> 
+                        Dégustez au restaurant
+             </button>    
+         </nav>       
+      </div>    
 
       <article>
 
