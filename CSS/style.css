@@ -1,163 +1,244 @@
-/*
-POLICES
-*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
-
-/*
-POLICES
-*/
-
-:root{
-
-    --purple : #9356DC ;
-    --pink : #FF79DA ;
-    --green : #99E2D0 ;
+/* header */
+/* bouton */
+.recherche--bouton:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  animation: mou 0.6s ease-in-out 0.05s 1 forwards;
 }
 
-body{
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
+/* coeur*/
+/* formulaire repas */
+/* box-shadow */
+/* corp de la page */
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  font-family: "Roboto", sans-serif;
 }
+
 /*
 LOGO
 */
-.p_logo{
-    display: flex;
-    justify-content: center;
+.p_logo {
+  display: flex;
+  justify-content: center;
 }
 
-.logo{
-   width: 158px; 
-   margin-bottom: -5%;
+.logo {
+  width: 158px;
+  margin-bottom: -4%;
 }
 
-/*
-ZONE FORM RECHERCHE
-*/
-
-.recherche{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 337px;
-    position: relative;
-    margin: 0px auto;
-    text-align: center;
-    
+/* selection texte */
+::selection {
+  background-color: unset;
+  color: unset;
 }
 
-.recherche__titre{
-    font-weight: 800;
-    font-size: 24px;
-    margin-top: 12%;
-    text-align: center;
-}
-
-.recherche--zone {
-    width: 100%;
-    height: 65px;
-    margin: 0 auto;
-    border: none;
-    font-size: 15px;
-    font-weight: 600;
-    box-shadow: inset 0px 2px 3px #b4b4b4;
-    background-color: #e7e7e7;
-    color: #000;
-    text-align: center;
+@media screen and (min-width: 1024px) {
+  ::selection {
+    background-color: #FF79DA;
+    color: #99E2D0;
   }
-
-  .recherche--bouton {
-    height: 50px;
-    width: 220px;
-    display: block;
-    margin:  auto;
-    margin-top: 7%;
-    border: none;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: 500;
-    box-shadow: 0px 5px 10px 0px #c1c1c1;
-    background: linear-gradient(170deg, var(--pink), var(--purple) );
-    color: #FFF;
+  .logo {
+    width: 158px;
+    margin-bottom: -1%;
+  }
+  .zone-recherche {
+    width: 100%;
+  }
+}
+/* bouton moteur de recherche avec activation animation */
+.recherche--bouton {
+  height: 50px;
+  width: 220px;
+  display: block;
+  margin: 35px auto;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0px 5px 10px 0px #c1c1c1;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: #FFF;
+}
+.recherche--bouton:hover {
+  box-shadow: 0px 5px 10px 0px #8e8e8e;
+}
+.recherche--bouton:focus + .recherche__archer {
+  animation: fleche 1.5s linear 0s 1 forwards;
+}
+.recherche--bouton:focus + .recherche__archer .recherche__archer--fleche {
+  transform-origin: bottom;
+  animation: fleche-tension 0.5s linear 1.35s 1 forwards;
 }
 
-.recherche__texte{
-    font-weight: 300;
+/* moteur de recherche */
+.recherche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 340px;
+  position: relative;
+  margin: 0px auto;
+  text-align: center;
+  /* placeholder */
+  /* titre du formulaire */
+  /* texte pub formulaire */
+}
+@media screen and (min-width: 620px) {
+  .recherche {
+    height: 280px;
+  }
+}
+.recherche--zone {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: inset 0px 2px 3px #b4b4b4;
+  background-color: #e7e7e7;
+  color: #000;
+  text-align: center;
+}
+.recherche--zone:focus {
+  background-color: #FF79DA;
+}
+.recherche--zone:focus ~ .recherche__archer .recherche__archer--fleche {
+  opacity: 0;
+}
+.recherche__titre {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 12%;
+  text-align: center;
+}
+.recherche__texte {
+  margin: 10px 10% 0 10%;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+.recherche i {
+  padding-right: 210px;
+  position: relative;
+  top: 30px;
 }
 
-.recherche i{
-    padding-right: 210px;
-    position: relative;
-    top: 30px;
+/* fonctionnement */
+.fonctionnement {
+  margin-top: 7%;
+  height: 440px;
+  background: #FFF;
+  /* titre de fonctionnement */
+  /* zone des 'boutons' */
 }
-.bloc_titre{
-    padding: 0px 15px 0px 15px;
-    background-color: #FAFAFA ;
-    height: 380px;
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    height: 280px;
+  }
 }
-
-/*
-Fonctionnement
-*/
-
-.bouton{
-    
-    width: 87%;
-    height: 75px;
-    position: relative;
-    margin: 10px auto;
-    padding: 0;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px 0px #b4b4b4;
-    background-color: #FAFAFA;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: start;
-    color: #000;
-    font-family: "Roboto", sans-serif
-
-}
-
-.bouton--numero {
-    position: absolute;
-    left: -10px;
-    top: 26px;
-    padding: 3px 8.5px 2px 6.5px;
-    background-color: #9356DC;
-    border: 1px solid #9356DC;
-    border-radius: 22px;
-    color: #FFF;
-}
-
-.bouton--noir {
-    width: 14px;
-    margin: 0 7% 0 11%;
-    position: relative;
-    color: grey;
-    text-indent: 11%;
-}
-
-.bouton--violet {
-    width: 14px;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-    z-index: -1;
-    margin: 0 7% 0 11%;
-    color: #9356DC;
-    text-indent: 11%;
-}
-
 .fonctionnement__titre {
-    margin: 0;
-    padding: 48px 0 18px 0;
-    font-size: 1.5rem;
-    text-indent: 6%;
+  margin: 0;
+  padding: 48px 0 18px 0;
+  font-size: 1.5rem;
+  text-indent: 6%;
+}
+.fonctionnement__explication {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.fonctionnement__explication {
-    display: flex;
-    flex-flow: row wrap;
+/* boutons */
+.bouton {
+  width: 87%;
+  height: 75px;
+  position: relative;
+  margin: 10px auto;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px #b4b4b4;
+  background-color: #FAFAFA;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: start;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  /* zone numero de bouton */
+  /* icone de bouton */
+  /* icone de bouton violet */
 }
+@media screen and (min-width: 1024px) {
+  .bouton {
+    width: 25%;
+  }
+}
+.bouton:hover {
+  animation: demi-mou 1s ease-in 0.05s 1 forwards;
+  cursor: pointer;
+}
+.bouton--numero {
+  position: absolute;
+  left: -10px;
+  top: 26px;
+  padding: 3px 8.5px 2px 6.5px;
+  background-color: #9356DC;
+  border: 1px solid #9356DC;
+  border-radius: 22px;
+  color: #FFF;
+}
+.bouton:hover .bouton--numero {
+  animation: tourne 1.5s linear forwards;
+}
+.bouton--noir {
+  width: 14px;
+  margin: 0 7% 0 11%;
+  position: relative;
+  color: grey;
+  text-indent: 11%;
+  font-size: 1rem;
+}
+.bouton:hover .bouton--noir {
+  opacity: 0;
+}
+.bouton--violet {
+  width: 14px;
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  z-index: -1;
+  margin: 0 7% 0 11%;
+  color: #9356DC;
+  text-indent: 11%;
+  font-size: 1rem;
+}
+.bouton:hover .bouton--violet {
+  z-index: 1;
+}
+.bouton--tel {
+  font-size: 1.1rem;
+}
+.bouton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #9356DC;
+  box-shadow: 0px 5px 10px 0px #b4b4b4;
+  border-radius: 20px;
+  opacity: 0;
+}
+.bouton:hover::after {
+  z-index: 1;
+  opacity: 0.1;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+{
+  "name": "dynamisez_une_page_web_avec_des_animations_css",
+  "version": "1.0.0",
+  "description": "Projet 3 openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahassan38/OpenclassroomsProject.git"
+  },
+  "author": "Hassan Alexandre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahassan38/OpenclassroomsProject/issues"
+  },
+  "homepage": "https://github.com/ahassan38/OpenclassroomsProject#readme"
+}

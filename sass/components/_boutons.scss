@@ -1,0 +1,27 @@
+/* bouton moteur de recherche avec activation animation */
+.recherche{
+    &--bouton{
+        height: 50px;
+        width: 220px;
+        display: block;
+        margin: 35px auto;
+        border: none;
+        border-radius: 25px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        @include shadow;
+        background: linear-gradient(170deg, $couleur-secondaire, $couleur-primaire);
+        color: $couleur-encre-sec; 
+        &:hover{  
+            @extend %bouton;
+            box-shadow: 0px 5px 10px 0px darken($ombre, 15%); 
+        }
+        &:focus + .recherche__archer{  
+            animation: fleche 1.5s linear 0s 1 forwards;
+        }
+        &:focus + .recherche__archer .recherche__archer--fleche{
+            transform-origin: bottom;       
+            animation: fleche-tension 0.5s linear 1.35s 1 forwards;   
+        }
+    }
+}
