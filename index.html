@@ -12,7 +12,7 @@
 </head>
 <body>
 
-   <header>
+   <header class="tete">
    <p class="p_logo">
       <img src="images/logo/ohmyfood.png" alt="logo ohmyfood"  class="logo">
    </p>
@@ -82,11 +82,97 @@
          </nav>       
       </section>    
 
-      <section class="Restaurants">
-         <h2>Restaurants</h2>
+      <!-- partie restaurants --> <!-- article parce que "c'est la réponse" du moteur de recherche -->
+      <section class='restaurants'>
 
-            
+         <h2 class='restaurants__titre'>Restaurants</h2>
 
+         <!-- navigation via les cartes restaurants -->
+         <nav class='restaurants__navigation'>
+
+             <!-- carte restaurant -->
+             <div class='carte'>
+
+                 <!-- lien -->
+                 <a href="restaurants/la_palette_du_gout.html" class='carte__lien'>
+                     <span class='carte__lien--nouveau'>Nouveau</span>
+                     <img class='carte__lien__image' src='images/restaurants/la_palette_du_gout.jpg'  alt='La palette du goût'>
+                     
+                     <!-- nom du restaurant et lieu -->
+                     <h3 class='carte__lien__titre'>La palette du goût</h3>
+                     <p class='carte__lien__texte'>Ménilmontant</p>
+                 </a>
+
+                 <!-- selection j'aime -->
+                 <input type='checkbox' class='carte__lien--selection' name='aime' id='aime_La_palette_du_gout'>
+                 <label for='aime_La_palette_du_gout' class='coeur'>
+                     <i class="far fa-heart coeur--vide"></i>
+                     <span class='coeur__filtre'><i class="fas fa-heart coeur__filtre--plein"></i></span>
+                 </label>
+               </div>
+
+             <!-- carte restaurant -->
+             <div class='carte'>
+
+                 <!-- lien -->
+                 <a href="restaurants/la_note_enchantee.html" class='carte__lien'>
+                     <span class='carte__lien--nouveau'>Nouveau</span>
+                     <img class='carte__lien__image' src="images/restaurants/la_note_enchantée.jpg" alt="La note enchantée">
+                     
+                     <!-- nom du restaurant et lieu -->
+                     <h3 class='carte__lien__titre'>La note enchantée</h3>
+                     <p class='carte__lien__texte'>Charonne</p>
+                 </a>
+
+                 <!-- selection j'aime -->
+                 <input type='checkbox' class='carte__lien--selection' name='aime' id='aime-La-note-enchantee'>
+                 <label for='aime-La-note-enchantee' class='coeur'>
+                     <i class="far fa-heart coeur--vide"></i>
+                     <span class='coeur__filtre'><i class="fas fa-heart coeur__filtre--plein"></i></span>
+                 </label>
+               </div>
+
+             <!-- carte restaurant -->
+             <div class='carte'>
+
+                 <!-- lien -->
+                 <a href="restaurants/a_la_française.html" class='carte__lien'>
+                     <img class='carte__lien__image' src="images/restaurants/A_la_française.jpg" alt="À la française">                
+                     
+                     <!-- nom du restaurant et lieu -->
+                     <h3 class='carte__lien__titre'>À la française</h3>
+                     <p class='carte__lien__texte'>Cité rouge</p>
+                 </a>
+
+                 <!-- selection j'aime -->
+                 <input type='checkbox' class='carte__lien--selection' name='aime' id='aime_a_la_française'>
+                 <label for='aime_a_la_française' class='coeur'>
+                     <i class="far fa-heart coeur--vide"></i>
+                     <span class='coeur__filtre'><i class="fas fa-heart coeur__filtre--plein"></i></span>
+                 </label>
+               </div
+               >
+
+             <!-- carte restaurant -->
+             <div class='carte'>
+
+                 <!-- lien -->
+                 <a href="restaurants/le_delice_des_sens.html" class='carte__lien'>
+                     <img class='carte__lien__image' src='images/restaurants/le_délice_des_sens.jpg' alt="Le délice des sens">
+                     
+                     <!-- nom du restaurant et lieu -->
+                     <h3 class='carte__lien__titre'>Le délice des sens</h3>
+                     <p class='carte__lien__texte'>Folie-Méricourt</p>
+                 </a>
+
+                 <!-- selection j'aime -->
+                 <input type='checkbox' class='carte__lien--selection' name='aime' id='aime_le_delice_des_sens'>
+                 <label for='aime_le_delice_des_sens' class='coeur'>
+                     <i class="far fa-heart coeur--vide"></i>
+                     <span class='coeur__filtre'><i class="fas fa-heart coeur__filtre--plein"></i></span>
+                 </label>
+               </div>
+         </nav>
       </section>
 
    </main>

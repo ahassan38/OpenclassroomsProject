@@ -4,7 +4,8 @@
   "description": "Projet 3 openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./CSS/style.css"
+    "sass": "sass --watch ./sass/main.scss:./CSS/style.css",
+    "prefix": "postcss ./CSS/style.css --use autoprefixer -d ./CSS/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Hassan Alexandre",
   "license": "ISC",
+  "browserslist": "last 4 versions" ,
   "bugs": {
     "url": "https://github.com/ahassan38/OpenclassroomsProject/issues"
   },

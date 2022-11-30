@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* header */
 /* bouton */
 .recherche--bouton:hover {
@@ -18,19 +19,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/*
-LOGO
-*/
-.p_logo {
-  display: flex;
-  justify-content: center;
-}
-
-.logo {
-  width: 158px;
-  margin-bottom: -4%;
-}
-
 /* selection texte */
 ::selection {
   background-color: unset;
@@ -41,13 +29,6 @@ LOGO
   ::selection {
     background-color: #FF79DA;
     color: #99E2D0;
-  }
-  .logo {
-    width: 158px;
-    margin-bottom: -1%;
-  }
-  .zone-recherche {
-    width: 100%;
   }
 }
 /* bouton moteur de recherche avec activation animation */
@@ -127,6 +108,175 @@ LOGO
   padding-right: 210px;
   position: relative;
   top: 30px;
+}
+.recherche .zone-recherche {
+  width: 100%;
+  margin-top: -5%;
+}
+@media screen and (min-width: 1024px) {
+  .recherche .zone-recherche {
+    margin-top: -1%;
+  }
+}
+
+.tete {
+  background: #FFF;
+  text-align: center;
+}
+
+/*
+LOGO
+*/
+.p_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 158px;
+}
+
+/* navigation restaurants */
+.restaurants {
+  height: 1190px;
+  background-color: #FAFAFA;
+  /* titre de la zone de navigation des restaurants */
+  /* élément de navigation */
+}
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    height: 700px;
+  }
+}
+.restaurants__titre {
+  position: relative;
+  margin: 0;
+  padding: 55px 0 20px 0;
+  text-indent: 6%;
+  font-size: 1.5rem;
+}
+.restaurants__navigation {
+  height: 1070px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__navigation {
+    height: 550px;
+  }
+}
+
+/* carte de restaurant */
+.carte {
+  height: 250px;
+  width: 87%;
+  display: inline;
+  position: relative;
+  border-radius: 20px;
+  color: #000;
+  background: #FFF;
+  box-shadow: 0px 5px 10px 0px #b4b4b4;
+  /* zone de lien */
+}
+@media screen and (min-width: 1024px) {
+  .carte {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carte:hover {
+    animation: coup 2s ease-in 0.05s forwards;
+  }
+}
+.carte__lien {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  background: #FFF;
+  text-decoration: none;
+  /* pancarte de nouveauté */
+  /* image du restaurant */
+  /* nom du restaurant */
+  /* lieu du restaurant */
+  /* zone coeur et interaction */
+}
+.carte__lien:link {
+  color: #000;
+}
+.carte__lien:visited {
+  color: #000;
+}
+.carte__lien--nouveau {
+  width: 80px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 6px 0;
+  transform-origin: 10% 50%;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #278870;
+}
+.carte__lien__image {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.carte__lien__titre {
+  margin: 0;
+  padding: 13px 0 0 0;
+  font-size: 1.1rem;
+  text-indent: 4%;
+  font-weight: 600;
+}
+.carte__lien__texte {
+  margin: 0;
+  padding: 5px 0 0 0;
+  text-indent: 4%;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+.carte__lien--selection {
+  display: none;
+}
+.carte__lien--selection:checked + .coeur .coeur--vide {
+  animation: efface 0.5s linear forwards;
+}
+.carte__lien--selection:checked + .coeur .coeur__filtre--plein {
+  opacity: 1;
+}
+.carte__lien--selection:checked + .coeur .coeur__filtre--plein {
+  opacity: 1;
+  z-index: 1;
+  animation: grandi-bat 1.8s linear forwards;
+}
+@media screen and (min-width: 1024px) {
+  .carte__lien--selection:hover + .coeur .coeur--vide {
+    animation: efface 0.5s linear forwards;
+  }
+  .carte__lien--selection:hover + .coeur .coeur__filtre--plein {
+    opacity: 1;
+  }
+  .carte__lien--selection:hover + .coeur .coeur__filtre--plein {
+    z-index: 1;
+    opacity: 1;
+    animation: grandi-bat 1.8s linear forwards;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carte:hover .carte__lien--nouveau {
+    z-index: 1;
+    animation: tombe 2s linear 0.05s;
+  }
 }
 
 /* fonctionnement */
