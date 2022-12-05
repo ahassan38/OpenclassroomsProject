@@ -23,14 +23,14 @@
     color: #000;
     text-align: center;
         &:focus{
-            background-color: $couleur-secondaire; 
+            border: 2px solid $couleur-secondaire; 
         }
         &:focus ~ .recherche__archer .recherche__archer--fleche{
             opacity: 0;
         }
     } /* titre du formulaire */
     &__titre{
-    font-weight: 700;
+    font-weight: 800;
     font-size: 25px;
     margin-top: 12%;
     text-align: center;

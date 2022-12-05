@@ -12,8 +12,11 @@
         @include shadow;
         background: linear-gradient(170deg, $couleur-secondaire, $couleur-primaire);
         color: $couleur-encre-sec; 
+        transform: scale(1);
+        transition: transform 400ms;
         &:hover{  
             @extend %bouton;
+            transform: scale(1.12);
             box-shadow: 0px 5px 10px 0px darken($ombre, 15%); 
         }
         &:focus + .recherche__archer{  

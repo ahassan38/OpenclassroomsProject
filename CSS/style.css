@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* header */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"); /* header */
 /* bouton */
 .recherche--bouton:hover {
   opacity: 0.9;
@@ -44,8 +44,11 @@ body {
   box-shadow: 0px 5px 10px 0px #c1c1c1;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   color: #FFF;
+  transform: scale(1);
+  transition: transform 400ms;
 }
 .recherche--bouton:hover {
+  transform: scale(1.12);
   box-shadow: 0px 5px 10px 0px #8e8e8e;
 }
 .recherche--bouton:focus + .recherche__archer {
@@ -88,13 +91,13 @@ body {
   text-align: center;
 }
 .recherche--zone:focus {
-  background-color: #FF79DA;
+  border: 2px solid #FF79DA;
 }
 .recherche--zone:focus ~ .recherche__archer .recherche__archer--fleche {
   opacity: 0;
 }
 .recherche__titre {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 25px;
   margin-top: 12%;
   text-align: center;
@@ -277,6 +280,77 @@ LOGO
     z-index: 1;
     animation: tombe 2s linear 0.05s;
   }
+}
+
+/* footer */
+.footer {
+  height: 203px;
+  margin-top: 30px;
+  color: #FFF;
+  background-color: #363636;
+  /* titre footer */
+  /* ensemble de li */
+}
+.footer__titre {
+  margin: 0;
+  padding: 20px 0 10px 0;
+  font-weight: 400;
+  text-indent: 7%;
+  font-size: 1.15rem;
+  font-family: "Shrikhand", cursive;
+}
+.footer__liste {
+  max-width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 7%;
+  padding: 0;
+  /* li */
+}
+@media screen and (min-width: 1024px) {
+  .footer__liste {
+    max-width: unset;
+    margin: 20px 0 0 0%;
+  }
+}
+.footer__liste--element {
+  padding: 0;
+  margin: 0 25% 0 0;
+  list-style-type: none;
+}
+@media screen and (min-width: 1024px) {
+  .footer__liste--element {
+    width: 18%;
+    margin: 0 1% 0 6%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__liste--element:hover {
+    transform-origin: 50%;
+    animation: virevolte 0.2s linear 1 forwards;
+  }
+}
+
+.lien {
+  display: block;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  color: #FFF;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+.lien:link {
+  color: #FFF;
+}
+.lien:visited {
+  color: #FFF;
+}
+.lien__icone {
+  width: 18px;
+  margin-right: 5px;
+  font-size: 0.9rem;
 }
 
 /* fonctionnement */
