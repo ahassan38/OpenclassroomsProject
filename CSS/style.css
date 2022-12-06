@@ -7,7 +7,7 @@
 }
 
 /* bouton */
-.recherche--bouton:hover {
+.repas--bouton:hover, .recherche--bouton:hover {
   opacity: 0.9;
   cursor: pointer;
   animation: mou 0.6s ease-in-out 0.05s 1 forwards;
@@ -20,6 +20,21 @@
 }
 
 /* formulaire repas */
+.repas__dessert, .repas__plat, .repas__entrée {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  border: none;
+}
+
+.repas__dessert--choix, .repas__plat--choix, .repas__entrée--choix {
+  width: 93vw;
+  height: 68px;
+  display: flex;
+  transform: translateY(10px);
+}
+
 /* box-shadow */
 /* corp de la page */
 body {
@@ -40,6 +55,553 @@ body {
   ::selection {
     background-color: #FF79DA;
     color: #99E2D0;
+  }
+}
+/* titre header */
+@keyframes zoop {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* animation bouton fleche retour page miroir header */
+@keyframes strillé {
+  0% {
+    /*transform: scaleX(0);*/
+    background-size: 0% 100%;
+  }
+  100% {
+    /*transform: scaleX(1);*/
+    background-size: 100% 100%;
+  }
+}
+/* animation bouton moteur de recherche header */
+@keyframes mou {
+  10% {
+    transform: scale3d(0.93, 0.93, 1);
+  }
+  40% {
+    transform: scale3d(1, 1, 1);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 1);
+  }
+  100% {
+    transform: scale3d(0.98, 0.98, 1);
+  }
+}
+/* animation activation bouton moteur de recherche */
+@keyframes fleche {
+  5% {
+    transform: translateY(0) translateX(0) rotateZ(0);
+  }
+  10% {
+    transform: translateY(0) translateX(0) rotateZ(-65deg);
+  }
+  15% {
+    transform: translateY(0) translateX(0) rotateZ(-90deg);
+  }
+  20% {
+    transform: translateY(0) translateX(0) rotateZ(90deg);
+  }
+  25% {
+    transform: translateY(-1vh) translateX(-3vw) rotateZ(450deg);
+  }
+  30% {
+    transform: translateY(-2vh) translateX(-7.75vw) rotateZ(810deg);
+  }
+  35% {
+    transform: translateY(-3vh) translateX(-12.5vw) rotateZ(1170deg);
+  }
+  40% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1530deg);
+  }
+  45% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1800deg);
+  }
+  50% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+  }
+  55% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1705deg);
+  }
+  60% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+  }
+  65% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1750deg);
+  }
+  70% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+  }
+  75% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1725deg);
+  }
+  80% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1730deg);
+  }
+  85% {
+    transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+  }
+  90% {
+    transform: translateY(-2vh) translateX(10vw) rotateZ(1740deg);
+  }
+  100% {
+    transform: translateY(-2vh) translateX(10vw) rotateZ(1740deg);
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 375px) {
+  @keyframes fleche {
+    5% {
+      transform: translateY(0) translateX(0) rotateZ(0);
+    }
+    10% {
+      transform: translateY(0) translateX(0) rotateZ(-65deg);
+    }
+    15% {
+      transform: translateY(0) translateX(0) rotateZ(-90deg);
+    }
+    20% {
+      transform: translateY(0) translateX(0) rotateZ(90deg);
+    }
+    25% {
+      transform: translateY(-1vh) translateX(-3vw) rotateZ(450deg);
+    }
+    30% {
+      transform: translateY(-2vh) translateX(-7.75vw) rotateZ(810deg);
+    }
+    35% {
+      transform: translateY(-3vh) translateX(-12.5vw) rotateZ(1170deg);
+    }
+    40% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1530deg);
+    }
+    45% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1800deg);
+    }
+    50% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    55% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1705deg);
+    }
+    60% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    65% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1750deg);
+    }
+    70% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    75% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1725deg);
+    }
+    80% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1730deg);
+    }
+    85% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    90% {
+      transform: translateY(-2vh) translateX(15vw) rotateZ(1740deg);
+    }
+    100% {
+      transform: translateY(-2vh) translateX(15vw) rotateZ(1740deg);
+    }
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 600px) {
+  @keyframes fleche {
+    5% {
+      transform: translateY(0) translateX(0) rotateZ(0);
+    }
+    10% {
+      transform: translateY(0) translateX(0) rotateZ(-65deg);
+    }
+    15% {
+      transform: translateY(0) translateX(0) rotateZ(-90deg);
+    }
+    20% {
+      transform: translateY(0) translateX(0) rotateZ(90deg);
+    }
+    25% {
+      transform: translateY(-1vh) translateX(-3vw) rotateZ(450deg);
+    }
+    30% {
+      transform: translateY(-2vh) translateX(-7.75vw) rotateZ(810deg);
+    }
+    35% {
+      transform: translateY(-3vh) translateX(-12.5vw) rotateZ(1170deg);
+    }
+    40% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1530deg);
+    }
+    45% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1800deg);
+    }
+    50% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    55% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1705deg);
+    }
+    60% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    65% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1750deg);
+    }
+    70% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    75% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1725deg);
+    }
+    80% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1730deg);
+    }
+    85% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    90% {
+      transform: translateY(-2vh) translateX(18vw) rotateZ(1740deg);
+    }
+    100% {
+      transform: translateY(-2vh) translateX(18vw) rotateZ(1740deg);
+    }
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 899px) {
+  @keyframes fleche {
+    5% {
+      transform: translateY(0) translateX(0) rotateZ(0);
+    }
+    10% {
+      transform: translateY(0) translateX(0) rotateZ(-65deg);
+    }
+    15% {
+      transform: translateY(0) translateX(0) rotateZ(-90deg);
+    }
+    20% {
+      transform: translateY(0) translateX(0) rotateZ(90deg);
+    }
+    25% {
+      transform: translateY(-1vh) translateX(-3vw) rotateZ(450deg);
+    }
+    30% {
+      transform: translateY(-2vh) translateX(-7.75vw) rotateZ(810deg);
+    }
+    35% {
+      transform: translateY(-3vh) translateX(-12.5vw) rotateZ(1170deg);
+    }
+    40% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1530deg);
+    }
+    45% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1800deg);
+    }
+    50% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    55% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1705deg);
+    }
+    60% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    65% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1750deg);
+    }
+    70% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    75% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1725deg);
+    }
+    80% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1730deg);
+    }
+    85% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    90% {
+      transform: translateY(-2vh) translateX(21vw) rotateZ(1740deg);
+    }
+    100% {
+      transform: translateY(-2vh) translateX(21vw) rotateZ(1740deg);
+    }
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  @keyframes fleche {
+    5% {
+      transform: translateY(0) translateX(0) rotateZ(0);
+    }
+    10% {
+      transform: translateY(0) translateX(0) rotateZ(-65deg);
+    }
+    15% {
+      transform: translateY(0) translateX(0) rotateZ(-90deg);
+    }
+    20% {
+      transform: translateY(0) translateX(0) rotateZ(90deg);
+    }
+    25% {
+      transform: translateY(-1vh) translateX(-3vw) rotateZ(450deg);
+    }
+    30% {
+      transform: translateY(-2vh) translateX(-7.75vw) rotateZ(810deg);
+    }
+    35% {
+      transform: translateY(-3vh) translateX(-12.5vw) rotateZ(1170deg);
+    }
+    40% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1530deg);
+    }
+    45% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1800deg);
+    }
+    50% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    55% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1705deg);
+    }
+    60% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    65% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1750deg);
+    }
+    70% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    75% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1725deg);
+    }
+    80% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1730deg);
+    }
+    85% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    90% {
+      transform: translateY(-2vh) translateX(23vw) rotateZ(1740deg);
+    }
+    100% {
+      transform: translateY(-2vh) translateX(23vw) rotateZ(1740deg);
+    }
+  }
+}
+@media screen and (min-width: 1201px) {
+  @keyframes fleche {
+    5% {
+      transform: translateY(0) translateX(0) rotateZ(0);
+    }
+    10% {
+      transform: translateY(0) translateX(0) rotateZ(-65deg);
+    }
+    15% {
+      transform: translateY(0) translateX(0) rotateZ(-90deg);
+    }
+    20% {
+      transform: translateY(0) translateX(0) rotateZ(90deg);
+    }
+    25% {
+      transform: translateY(-1vh) translateX(-3vw) rotateZ(450deg);
+    }
+    30% {
+      transform: translateY(-2vh) translateX(-7.75vw) rotateZ(810deg);
+    }
+    35% {
+      transform: translateY(-3vh) translateX(-12.5vw) rotateZ(1170deg);
+    }
+    40% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1530deg);
+    }
+    45% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1800deg);
+    }
+    50% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    55% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1705deg);
+    }
+    60% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1740deg);
+    }
+    65% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1750deg);
+    }
+    70% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    75% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1725deg);
+    }
+    80% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1730deg);
+    }
+    85% {
+      transform: translateY(-4vh) translateX(-15vw) rotateZ(1735deg);
+    }
+    90% {
+      transform: translateY(-2vh) translateX(24vw) rotateZ(1740deg);
+    }
+    100% {
+      transform: translateY(-2vh) translateX(24vw) rotateZ(1740deg);
+    }
+  }
+}
+@keyframes fleche-tension {
+  0% {
+    transform: rotate(5deg);
+  }
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(4deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(2deg);
+  }
+  35% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+/* animation fonctionnement */
+@keyframes demi-mou {
+  0% {
+    transform: scale3d(0.97, 0.97, 1);
+  }
+  20% {
+    transform: scale3d(1.02, 1.02, 1);
+  }
+  40% {
+    transform: scale3d(0.98, 0.98, 1);
+  }
+  60% {
+    transform: scale3d(1, 1, 1);
+  }
+  80% {
+    transform: scale3d(0.99, 0.99, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes tourne {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-90deg);
+  }
+  20% {
+    transform: rotate(-40deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(540deg);
+  }
+  60% {
+    transform: rotate(720deg);
+  }
+  70% {
+    transform: rotate(780deg);
+  }
+  80% {
+    transform: rotate(690deg);
+  }
+  90% {
+    transform: rotate(730deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+/* animation navigation restaurants */
+@keyframes coup {
+  10% {
+    transform: scale3d(0.975, 0.975, 1);
+  }
+  40% {
+    transform: scale3d(0.975, 0.975, 1);
+  }
+  100% {
+    transform: scale3d(0.99, 0.99, 1);
+  }
+}
+@keyframes tombe {
+  5% {
+    transform: rotateZ(40deg);
+  }
+  10% {
+    transform: rotateZ(110deg);
+  }
+  15% {
+    transform: rotateZ(85deg);
+  }
+  20% {
+    transform: rotateZ(92.5deg);
+  }
+  30% {
+    transform: rotateZ(90deg);
+  }
+  40% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(75deg);
+  }
+  60% {
+    transform: rotateZ(60deg);
+  }
+  70% {
+    transform: rotateZ(45deg);
+  }
+  80% {
+    transform: rotateZ(30deg);
+  }
+  90% {
+    transform: rotateZ(15deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }
 /*animation coeur */
@@ -98,6 +660,115 @@ body {
     transform: scale3d(1, 1, 1);
   }
 }
+/* titre menu miroir */
+@keyframes boubou {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 360deg);
+  }
+  60% {
+    transform: rotate3d(1, 0, 0, 420deg);
+  }
+  70% {
+    transform: rotate3d(1, 0, 0, 370deg);
+  }
+  80% {
+    transform: rotate3d(1, 0, 0, 330deg);
+  }
+  90% {
+    transform: rotate3d(1, 0, 0, 350deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 360deg);
+  }
+}
+/* animation menu miroir restaurants */
+@keyframes flou {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes détend {
+  0% {
+    transform: scaleX(0.5);
+  }
+  20% {
+    transform: scaleX(0.3);
+  }
+  40% {
+    transform: scaleX(0.55);
+  }
+  60% {
+    transform: scaleX(0.42);
+  }
+  80% {
+    transform: scaleX(0.55);
+  }
+  100% {
+    transform: scaleX(0.5);
+  }
+}
+@media screen and (min-width: 1024px) {
+  @keyframes détend {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(7.5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+@keyframes colle {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes tour {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+/* animation footer */
+@keyframes virevolte {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(16px);
+  }
+}
 /* bouton moteur de recherche avec activation animation */
 .recherche--bouton {
   height: 50px;
@@ -124,6 +795,26 @@ body {
 .recherche--bouton:focus + .recherche__archer .recherche__archer--fleche {
   transform-origin: bottom;
   animation: fleche-tension 0.5s linear 1.35s 1 forwards;
+}
+
+.repas--bouton {
+  height: 50px;
+  width: 185px;
+  display: block;
+  margin: 40px auto 70px auto;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 400;
+  transform: scale(1);
+  transition: transform 400ms;
+  box-shadow: 0px 5px 10px 0px #c1c1c1;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: #FFF;
+}
+.repas--bouton:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 10px 0px #f900b4;
 }
 
 /* moteur de recherche */
@@ -477,6 +1168,363 @@ LOGO
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* bandeau des pages menu */
+.bandeau {
+  position: relative;
+  /* zone en dessous de l'image */
+}
+.bandeau__image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+@media screen and (min-width: 900px) {
+  .bandeau__image {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.bandeau__texte {
+  width: 100%;
+  height: 85px;
+  position: absolute;
+  bottom: -46px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #FAFAFA;
+  /* nom de la table (restaurant) */
+  /* coeur et effet/animation */
+}
+.bandeau__texte:hover .bandeau__texte__titre {
+  animation: boubou 1.2s ease-in forwards;
+}
+.bandeau__texte__titre {
+  padding: 28.5px 0 28.5px 0;
+  margin: 0;
+  transform-origin: 100% 50%;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-indent: 3%;
+  font-family: "Shrikhand", cursive;
+}
+@media screen and (max-width: 319px) {
+  .bandeau__texte__titre {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bandeau__texte__titre {
+    text-align: center;
+    text-indent: 0;
+  }
+}
+.bandeau__texte--selection {
+  display: none;
+}
+.bandeau__texte--selection:checked + .coeur .coeur--vide {
+  animation: efface 0.5s linear forwards;
+}
+.bandeau__texte--selection:checked + .coeur .coeur__filtre--plein {
+  opacity: 1;
+}
+.bandeau__texte--selection:checked + .coeur .coeur__filtre--plein {
+  z-index: 1;
+  opacity: 1;
+  animation: grandi-bat 1.8s linear forwards;
+}
+@media screen and (min-width: 1024px) {
+  .bandeau__texte--selection:hover + .coeur .coeur--vide {
+    animation: efface 0.5s linear forwards;
+  }
+  .bandeau__texte--selection:hover + .coeur .coeur__filtre--plein {
+    opacity: 1;
+  }
+  .bandeau__texte--selection:hover + .coeur .coeur__filtre--plein {
+    z-index: 1;
+    opacity: 1;
+    animation: grandi-bat 1.8s linear forwards;
+  }
+}
+
+/* menu des repas */
+.repas {
+  margin: 25px 0 0 0;
+  padding: 0;
+  background-color: #FAFAFA;
+  animation: flou 2s linear 0s forwards;
+  /* titre des zones de repas */
+  /* zone des entrées */
+  /* zone des plats */
+  /* zone des desserts */
+}
+.repas__titre {
+  height: 30px;
+  min-width: 80px;
+  max-width: 200px;
+  position: relative;
+  left: 5%;
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* barre sous les titres */
+}
+@media screen and (min-width: 1024px) {
+  .repas__titre {
+    width: 80vw;
+    max-width: 80vw;
+    left: 10%;
+  }
+}
+.repas__titre--barre {
+  width: 100%;
+  max-width: 100px;
+  height: 2.5px;
+  display: block;
+  margin-top: 5px;
+  background-color: #99E2D0;
+  transform-origin: 0% 50%;
+  transform: scaleX(0.5);
+}
+@media screen and (min-width: 1024px) {
+  .repas__titre--barre {
+    width: 80vw;
+    max-width: 80vw;
+    transform: scaleX(1);
+  }
+}
+.repas__titre:hover .repas__titre--barre {
+  animation: détend 0.6s ease-out;
+}
+@media screen and (min-width: 1024px) {
+  .repas__titre:hover .repas__titre--barre {
+    animation: détend 0.3s linear;
+  }
+}
+.repas__entrée {
+  height: 250px;
+  min-height: 250px;
+  margin: 0 0 0 0;
+  padding: 5px 0 0 0;
+  opacity: 0;
+  animation: flou 1.3s linear forwards;
+  /* zone pour 4 choix */
+  /* type d'entrée */
+}
+@media screen and (min-width: 1024px) {
+  .repas__entrée {
+    height: 85px;
+    min-height: unset;
+  }
+}
+.repas__entrée--quatrechoix {
+  height: 320px;
+}
+@media screen and (min-width: 1024px) {
+  .repas__entrée--quatrechoix {
+    height: 170px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .repas__entrée--choix {
+    width: 30vw;
+  }
+}
+.repas__entrée--choix:nth-child(1) {
+  animation: colle 1.5s ease-in-out forwards;
+}
+.repas__entrée--choix:nth-child(2) {
+  animation: colle 1.5s ease-in-out 0.1s forwards;
+}
+.repas__entrée--choix:nth-child(3) {
+  animation: colle 1.5s ease-in-out 0.2s forwards;
+}
+.repas__entrée--choix:nth-child(4) {
+  animation: colle 1.5s ease-in-out 0.3s forwards;
+}
+.repas__plat {
+  height: 250px;
+  margin: 0 0 0 0;
+  padding: 5px 0 0 0;
+  opacity: 0;
+  animation: flou 1.3s linear forwards;
+  /* type de plat */
+}
+@media screen and (min-width: 1024px) {
+  .repas__plat {
+    height: 85px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .repas__plat--choix {
+    width: 30vw;
+  }
+}
+.repas__plat--choix:nth-child(1) {
+  animation: colle 1.5s ease-in-out forwards;
+}
+.repas__plat--choix:nth-child(2) {
+  animation: colle 1.5s ease-in-out 0.1s forwards;
+}
+.repas__plat--choix:nth-child(3) {
+  animation: colle 1.5s ease-in-out 0.2s forwards;
+}
+.repas__dessert {
+  height: 250px;
+  margin: 0 0 0 0;
+  padding: 5px 0 0 0;
+  opacity: 0;
+  animation: flou 1.3s linear forwards;
+  /* type des desserts */
+}
+@media screen and (min-width: 1024px) {
+  .repas__dessert {
+    height: 85px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .repas__dessert--choix {
+    width: 30vw;
+  }
+}
+.repas__dessert--choix:nth-child(1) {
+  animation: colle 1.5s ease-in-out forwards;
+}
+.repas__dessert--choix:nth-child(2) {
+  animation: colle 1.5s ease-in-out 0.1s forwards;
+}
+.repas__dessert--choix:nth-child(3) {
+  animation: colle 1.5s ease-in-out 0.2s forwards;
+}
+
+/* zone chaque assiette */
+.assiette {
+  width: 930px;
+  height: 68px;
+  display: flex;
+  justify-content: stretch; /* start/center décale la div validé */
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px #b4b4b4;
+  background-color: #FFF;
+  overflow: hidden;
+  cursor: pointer;
+  /* nom de l'assiette */
+  /* prix de l'assiette */
+  /* zone validation choix assiette */
+}
+.assiette--un {
+  opacity: 0;
+  animation: flou 0.6s linear 0.8s forwards;
+}
+.assiette--deux {
+  opacity: 0;
+  animation: flou 0.6s linear 0.9s forwards;
+}
+.assiette--trois {
+  opacity: 0;
+  animation: flou 0.6s linear 1s forwards;
+}
+.assiette--quatre {
+  opacity: 0;
+  animation: flou 0.6s linear 1.1s forwards;
+}
+.assiette__texte {
+  min-width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  text-indent: 10px;
+  flex: 1;
+  /* texte accompagnant du menu */
+}
+.assiette__texte__menu {
+  width: 100%;
+  width: 100%;
+  display: block;
+  margin: -10px 0 0 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.assiette__texte__menu:first-of-type {
+  height: 24px;
+  margin: 12px 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.assiette__prix {
+  height: 32px;
+  width: 45px;
+  padding-left: 0px;
+  margin: 36px 3px 0 3px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.4s linear;
+}
+.assiette--valide {
+  width: 0px;
+  min-width: 0px;
+  height: 68px;
+  display: flex;
+  flex: 0;
+  justify-content: center;
+  position: relative;
+  left: 1px; /* évite un escalier de l'animation */
+  background-color: #c1ede2;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform-origin: 100% 50%;
+  transition: all 0.4s linear;
+}
+.assiette--valide--icone {
+  position: absolute;
+  left: 20px;
+  margin: 24px 0 24px 0;
+  font-size: 1.25rem;
+  color: #FFF;
+}
+.assiette:hover > .assiette--valide {
+  min-width: 60px;
+}
+
+/* selection choix assiette */
+.selection {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .selection:hover + .assiette .assiette--valide {
+    min-width: 60px;
+    background-color: #99E2D0;
+  }
+  .selection:checked + .assiette .assiette--valide {
+    min-width: 60px;
+    background-color: #99E2D0;
+  }
+  .selection:not(:checked) + .assiette .assiette--valide {
+    min-width: 0px;
+    background-color: #99E2D0;
+  }
+  .selection:checked + .assiette .assiette--valide--icone {
+    animation: tour 0.4s linear forwards;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .selection:checked + .assiette .assiette--valide {
+    min-width: 60px;
+    background-color: #99E2D0;
+  }
+  .selection:not(:checked) + .assiette:hover .assiette--valide--icone {
+    animation: tour 0.4s linear forwards;
+  }
 }
 
 /* fonctionnement */
