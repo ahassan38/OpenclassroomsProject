@@ -16,8 +16,8 @@
         transition: transform 400ms;
         &:hover{  
             @extend %bouton;
-            transform: scale(1.12);
-            box-shadow: 0px 5px 10px 0px darken($ombre, 15%); 
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px 0px darken($couleur-secondaire, 25%); 
         }
         &:focus + .recherche__archer{  
             animation: fleche 1.5s linear 0s 1 forwards;

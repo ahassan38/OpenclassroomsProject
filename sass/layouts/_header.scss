@@ -1,7 +1,34 @@
 .tete{
     background: $coul-bg;
     text-align: center;
-}
+    /* zone flèche */
+        &__flèche{
+            @extend %tap-fleche;
+            position:absolute;
+            top: 9px;
+            left: 2%; 
+            color: $couleur-encre;
+            text-decoration: none;
+            &:visited{
+                color: $couleur-encre;
+            } /* icone flèche */
+            &--vide{
+                @extend %tap-fleche;
+                position:absolute;
+                top: 0px;
+                left: 0px;
+                font-size: 1.3rem; 
+            }
+            @media screen and (min-width: $desktop){
+                &:hover .tete__flèche--vide{
+                    opacity: 1;
+                    color: $couleur-secondaire;
+                    transform: translateX(-25px);
+                    transition: all 0.3s;
+                }
+            } 
+        }
+    }
 
 /*
 LOGO
