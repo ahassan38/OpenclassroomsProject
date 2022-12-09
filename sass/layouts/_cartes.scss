@@ -32,14 +32,17 @@
     color: $couleur-encre;
     background: $coul-bg;
     @include shadow-ok;
+
+      &:hover{
+        animation: coup 2s ease-in 0.05s forwards;
+        box-shadow: 0 0 10px $couleur-tertiaire;
+    } 
     @media screen and (min-width: $desktop){
         width: 45%;
     }
-    @media screen and (min-width: $desktop){
-        &:hover{
-            animation: coup 2s ease-in 0.05s forwards;
-        } 
-    } /* zone de lien */
+    
+        
+     /* zone de lien */
     &__lien{
         position: absolute;
         top: 0;
@@ -122,6 +125,7 @@
         &:hover .carte__lien--nouveau{
             z-index: 1;
             animation: tombe 2s linear 0.05s;
+
         }
     }    
 }

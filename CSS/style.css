@@ -937,14 +937,13 @@ LOGO
   box-shadow: 0px 5px 10px 0px #b4b4b4;
   /* zone de lien */
 }
+.carte:hover {
+  animation: coup 2s ease-in 0.05s forwards;
+  box-shadow: 0 0 10px #99E2D0;
+}
 @media screen and (min-width: 1024px) {
   .carte {
     width: 45%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .carte:hover {
-    animation: coup 2s ease-in 0.05s forwards;
   }
 }
 .carte__lien {
@@ -1636,7 +1635,7 @@ LOGO
   text-shadow: 0 0 0 whitesmoke;
   animation: smoky 1s 3s both;
 }
-.loader .green {
+.loader .sec {
   color: #FF79DA;
 }
 @keyframes smoky {
