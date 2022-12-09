@@ -1,22 +1,5 @@
-/* titre header */
-@keyframes zoop{
-    0%{transform: scale(1);}
-    10%{transform: scale(1);}
-    50%{transform: scale(1.25);}
-    90%{transform: scale(1);}
-    100%{transform: scale(1);}
-}
-/* animation bouton fleche retour page miroir header */
-@keyframes strillé {
-    0% {
-      /*transform: scaleX(0);*/
-       background-size: 0% 100%;
-    }
-    100% {
-      /*transform: scaleX(1);*/
-      background-size: 100% 100%;
-    }
-}
+
+
 
 /* animation bouton moteur de recherche header */
 @keyframes mou{
