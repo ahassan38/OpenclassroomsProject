@@ -50,7 +50,7 @@
         @include margin;
         @include pad;
         opacity: 0; 
-        animation: flou 1.3s linear forwards; 
+        animation: flou 2s linear 1s forwards; 
         @media screen and (min-width: $desktop){
             height: 85px;
             min-height: unset;
@@ -86,7 +86,7 @@
         @include margin;
         @include pad;
         opacity: 0; 
-        animation: flou 1.3s linear forwards; 
+        animation: flou 4s linear 1s forwards; 
         @media screen and (min-width: $desktop){
             height: 85px;
         } /* type de plat */
@@ -112,7 +112,7 @@
         @include margin;
         @include pad;
         opacity: 0; 
-        animation: flou 1.3s linear forwards; 
+        animation: flou 6s linear 1s forwards; 
         @media screen and (min-width: $desktop){
             height: 85px;
         } /* type des desserts */

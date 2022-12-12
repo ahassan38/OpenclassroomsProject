@@ -1281,7 +1281,7 @@ LOGO
   margin: 0 0 0 0;
   padding: 5px 0 0 0;
   opacity: 0;
-  animation: flou 1.3s linear forwards;
+  animation: flou 2s linear 1s forwards;
   /* zone pour 4 choix */
   /* type d'entrée */
 }
@@ -1321,7 +1321,7 @@ LOGO
   margin: 0 0 0 0;
   padding: 5px 0 0 0;
   opacity: 0;
-  animation: flou 1.3s linear forwards;
+  animation: flou 4s linear 1s forwards;
   /* type de plat */
 }
 @media screen and (min-width: 1024px) {
@@ -1348,7 +1348,7 @@ LOGO
   margin: 0 0 0 0;
   padding: 5px 0 0 0;
   opacity: 0;
-  animation: flou 1.3s linear forwards;
+  animation: flou 6s linear 1s forwards;
   /* type des desserts */
 }
 @media screen and (min-width: 1024px) {
